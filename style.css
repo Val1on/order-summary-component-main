@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+    
+    --font-family: 'Red Hat Display', sans-serif;
+    --fw-medium: 500;
+    --fw-bold: 700;
+    --fw-black: 900;
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Pale-blue);
+}
+.container {
+    width: 450px;
+    z-index: 1;
+    background-color: white;
+    border-radius: 1.5rem;
+    box-shadow: 0px 40px 50px -25px hsla(245, 75%, 52%, 0.3);
+}
+.bg-desktop {
+    z-index: -1;
+    position: absolute;
+    right: 0%;
+    bottom: 50%;
+    width: 100%;
+}
+.bg-mobile {
+    z-index: -1;
+    display: none;
+}
+.button {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family);
+}
+#payment {
+    background-color: var(--Bright-blue);
+    color: var(--Very-pale-blue);
+    border: none;
+    margin: 1rem;
+    padding: 1rem;  
+    border-radius: 0.7rem;
+    font-weight: var(--fw-bold);
+    margin-left: 3rem;
+    margin-right: 3rem;
+    font-size: 0.9rem;
+    box-shadow: 0px 13px 20px  hsla(245, 75%, 52%, 0.3);
+}
+#cancel {
+    color: var(--Desaturated-blue);
+    border: none;
+    background-color: white;
+    margin: 1rem;
+    margin-bottom: 3rem;
+    font-weight: var(--fw-black);
+    font-size: 0.9rem;
+    font-family: var(--font-family);
+}
+.plan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    background-color: var(--Very-pale-blue);
+    font-family: var(--font-family);
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border-radius: 0.7rem;
+    padding: 0.7rem 1rem;
+}
+.price-plan {
+    margin-left: 1.5rem;
+    margin-right: 5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.order {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+    font-family: var(--font-family);
+    word-wrap: break-word;
+    text-align: center;
+    padding-top: 2.5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    color: var(--Dark-blue);
+    line-height: 1.5rem;
+}
+.hero {
+    border-top-right-radius: 1.5rem;
+    border-top-left-radius: 1.5rem;
+    bottom: 50%;
+}
+.change {
+    border: none;
+    color: var(--Bright-blue);
+    background-color: var(--Very-pale-blue);
+    text-decoration: underline;
+    font-weight: var(--fw-black);
+    font-family: var(--font-family);
+    font-size: 0.9rem;
+}
+h1 {
+    margin-bottom: 1.5rem ;
+}
+p {
+    color: var(--Desaturated-blue);
+    font-size: 1rem;
+    
+    
+}
+h2 {
+    color: var(--Dark-blue);
+    font-size: 1rem;
+    font-weight: var(--fw-black);
+}
+.music {
+    margin-top: 0.3rem;
+    
+
+}
+.change:hover {
+    text-decoration: none;
+    color: hsl(245, 55%, 66%);
+   
+
+}
+#cancel:hover {
+    color: var(--Dark-blue);
+
+}
+#payment:hover{
+    background-color: hsl(245, 55%, 66%);
+
+}
+
+
+@media only screen and (max-width:500px) {
+    
+    .container {
+        width: 375px;
+    }
+    .order {
+        margin-left: 3.5rem;
+        margin-right: 3.5rem;
+        
+
+    }
+    .plan {
+        margin: 1.5rem;
+        margin-bottom: 0.5rem;
+
+    }
+    .price-plan{
+        margin-right: 4rem;
+    }
+    #payment {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+    #cancel {
+        margin-bottom: 2rem;
+        margin-top: 0.7rem;
+    }
+    .hero {
+        width: 100%;
+    }
+}
